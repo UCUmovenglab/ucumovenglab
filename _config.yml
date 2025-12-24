@@ -6,7 +6,7 @@ description: >-
   El laboratorio cuenta con dos investigadores principales (Dr. Ing. Enrique Ferreira 
   y Dr. Ing. Pablo Iturralde), y colaboradores en otros grupos de investigación.
 baseurl: ""
-url: ""
+url: "https://ucumotionlab.github.io"
 
 # Build settings
 theme: minima
