@@ -5,8 +5,8 @@ description: >-
   Laboratorio de Movimiento Humano de la Universidad Católica del Uruguay.
   El laboratorio cuenta con dos investigadores principales (Dr. Ing. Enrique Ferreira 
   y Dr. Ing. Pablo Iturralde), y colaboradores en otros grupos de investigación.
-baseurl: ""
-url: ""
+baseurl: "/ucumovenglab"
+url: "https://UCUmovenglab.github.io"
 
 # Build settings
 theme: minima

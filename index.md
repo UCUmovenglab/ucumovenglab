@@ -21,5 +21,5 @@ Aplicamos tecnologías digitales avanzadas para capturar, analizar y modelar el 
 
 ---
 
-Para más información sobre nuestro equipo, visite la página de [equipo](/team/).  
-Para conocer más sobre nuestras líneas de investigación, visite [investigación](/research/).
+Para más información sobre nuestro equipo, visite la página de [equipo]({{ site.baseurl }}/team/).  
+Para conocer más sobre nuestras líneas de investigación, visite [investigación]({{ site.baseurl }}/research/).
