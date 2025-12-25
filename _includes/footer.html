@@ -1,0 +1,30 @@
+{% assign image = page.footer | default: site.footer %}
+{% assign dark = page.footer-dark | is_nil: site.footer-dark | is_nil: true %}
+
+<footer
+  class="background"
+  style="--image: url('{{ image | relative_url | uri_escape }}')"
+  {% if dark == true or dark == false %}
+    data-dark="{{ dark }}"
+  {% endif %}
+>
+  {% if site.links %}
+    <div class="links">
+      {% for link in site.links %}
+        {% if link[1] %}
+          {% include button.html
+            icon=link[0]
+            link=link[1]
+            tooltip=link[0]
+            style="bare"
+          %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endif %}
+  <div class="legal">
+    {% if site.title and site.show-title != false %}
+      <span>&copy; {{ "now" | date: "%Y" }} {{ site.title }}</span>
+    {% endif %}
+  </div>
+</footer>
