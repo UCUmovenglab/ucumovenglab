@@ -8,14 +8,14 @@ description: >-
 # Note: baseurl is empty here for local development.
 # GitHub Actions workflow overrides this with --baseurl flag during deployment.
 baseurl: ""
-url: "https://ucumotionlab.github.io"
+url: "https://ucumovenglab.github.io"
 header: images/background.jpg
 footer: images/background.jpg
 
 # Site social media and other links
 links:
   email:
-  github: UCUmotionlab
+  github: UCUmovenglab
 
 ### jekyll settings
 
