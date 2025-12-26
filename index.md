@@ -16,9 +16,11 @@ The Movement Engineering Lab at [Universidad Católica del Uruguay](https://ucu.
 
 {% include section.html %}
 
-## Highlights
+## Recent Publications
 
-{% include list.html data="citations" component="citation" style="rich" %}
+{% include list.html data="citations" component="citation" style="rich" limit=5 %}
+
+[See all publications &rarr;](publications)
 
 {% include section.html %}
 

@@ -16,9 +16,11 @@ El grupo de Ingeniería del Movimiento de la [Universidad Católica del Uruguay]
 
 {% include section.html %}
 
-## Destacados
+## Publicaciones Recientes
 
-{% include list.html data="citations" component="citation" style="rich" %}
+{% include list.html data="citations" component="citation" style="rich" limit=5 %}
+
+[Ver todas las publicaciones &rarr;](/es/publications)
 
 {% include section.html %}
 

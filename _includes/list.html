@@ -7,6 +7,7 @@ Usage: {% include list.html data="citations" component="citation" %}
 {% assign component = include.component | default: "card" %}
 {% assign style = include.style | default: "" %}
 {% assign filters = include.filters %}
+{% assign limit = include.limit | default: 0 %}
 
 {% if data_name == "members" %}
   {% assign items = site.members %}
@@ -22,6 +23,7 @@ Usage: {% include list.html data="citations" component="citation" %}
 
 {% if items.size > 0 %}
 <div class="list list-{{ component }}">
+  {% assign count = 0 %}
   {% for item in items %}
     {% assign show = true %}
 
@@ -39,7 +41,11 @@ Usage: {% include list.html data="citations" component="citation" %}
     {% endif %}
 
     {% if show %}
+      {% if limit > 0 and count >= limit %}
+        {% break %}
+      {% endif %}
       {% include {{ component | append: ".html" }} item=item style=style %}
+      {% assign count = count | plus: 1 %}
     {% endif %}
   {% endfor %}
 </div>
