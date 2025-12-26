@@ -1,0 +1,46 @@
+{% comment %}
+List component - renders a list of items from data files
+Usage: {% include list.html data="citations" component="citation" %}
+{% endcomment %}
+
+{% assign data_name = include.data %}
+{% assign component = include.component | default: "card" %}
+{% assign style = include.style | default: "" %}
+{% assign filters = include.filters %}
+
+{% if data_name == "members" %}
+  {% assign items = site.members %}
+{% elsif data_name == "posts" %}
+  {% assign items = site.posts %}
+{% elsif data_name == "citations" %}
+  {% assign items = site.data.citations %}
+{% elsif data_name == "projects" %}
+  {% assign items = site.data.projects %}
+{% else %}
+  {% assign items = site.data[data_name] %}
+{% endif %}
+
+{% if items.size > 0 %}
+<div class="list list-{{ component }}">
+  {% for item in items %}
+    {% assign show = true %}
+
+    {% comment %} Apply filters if specified {% endcomment %}
+    {% if filters %}
+      {% assign filter_parts = filters | split: ", " %}
+      {% for filter in filter_parts %}
+        {% assign kv = filter | split: ": " %}
+        {% assign key = kv[0] %}
+        {% assign value = kv[1] %}
+        {% if item[key] != value %}
+          {% assign show = false %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+
+    {% if show %}
+      {% include {{ component | append: ".html" }} item=item style=style %}
+    {% endif %}
+  {% endfor %}
+</div>
+{% endif %}

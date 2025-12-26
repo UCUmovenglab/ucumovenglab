@@ -1,0 +1,28 @@
+# Types for publications, projects, etc.
+
+- id: paper
+  icon: fa-solid fa-file-lines
+
+- id: preprint
+  icon: fa-solid fa-file-pen
+
+- id: dataset
+  icon: fa-solid fa-database
+
+- id: software
+  icon: fa-solid fa-code
+
+- id: thesis
+  icon: fa-solid fa-graduation-cap
+
+- id: book
+  icon: fa-solid fa-book
+
+- id: chapter
+  icon: fa-solid fa-book-open
+
+- id: poster
+  icon: fa-solid fa-chalkboard
+
+- id: presentation
+  icon: fa-solid fa-person-chalkboard

@@ -1,0 +1,8 @@
+# ORCID profiles to auto-fetch publications from
+# Publications are fetched monthly via GitHub Actions
+
+- orcid: 0000-0001-6074-9070
+  name: Pablo Iturralde
+
+- orcid: 0000-0002-6506-9477
+  name: Enrique Ferreira

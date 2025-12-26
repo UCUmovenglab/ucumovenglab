@@ -1,0 +1,27 @@
+{% assign link = include.link %}
+{% assign text = include.text | default: include.link %}
+{% assign type = include.type | default: "link" %}
+{% assign icon = include.icon %}
+{% assign style = include.style | default: "" %}
+
+{% if type == "email" %}
+  {% assign link = "mailto:" | append: include.link %}
+  {% assign icon = icon | default: "fa-solid fa-envelope" %}
+{% elsif type == "github" %}
+  {% assign link = "https://github.com/" | append: include.link %}
+  {% assign icon = icon | default: "fa-brands fa-github" %}
+{% elsif type == "orcid" %}
+  {% assign link = "https://orcid.org/" | append: include.link %}
+  {% assign icon = icon | default: "fa-brands fa-orcid" %}
+{% elsif type == "google-scholar" %}
+  {% assign link = "https://scholar.google.com/citations?user=" | append: include.link %}
+  {% assign icon = icon | default: "fa-solid fa-graduation-cap" %}
+{% elsif type == "twitter" %}
+  {% assign link = "https://twitter.com/" | append: include.link %}
+  {% assign icon = icon | default: "fa-brands fa-twitter" %}
+{% endif %}
+
+<a href="{{ link }}" class="button {{ style }}" {% if link contains "://" %}target="_blank"{% endif %}>
+  {% if icon %}<i class="{{ icon }}"></i>{% endif %}
+  {{ text }}
+</a>

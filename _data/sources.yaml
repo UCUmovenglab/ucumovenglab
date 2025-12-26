@@ -1,0 +1,10 @@
+# Manual publication sources
+# Add DOIs here to include specific publications with custom metadata
+# Publications from ORCID profiles are auto-fetched (see orcid.yaml)
+
+# Example:
+# - id: doi:10.1234/example
+#   image: images/publications/example.png
+#   tags:
+#     - motor control
+#     - rehabilitation

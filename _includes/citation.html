@@ -1,0 +1,45 @@
+{% assign item = include.item %}
+{% assign style = include.style | default: "" %}
+
+<div class="citation {{ style }}">
+  <div class="citation-content">
+    <h3 class="citation-title">
+      {% if item.link %}
+      <a href="{{ item.link }}" target="_blank">{{ item.title }}</a>
+      {% else %}
+      {{ item.title }}
+      {% endif %}
+    </h3>
+
+    {% if item.authors %}
+    <p class="citation-authors">
+      {% for author in item.authors %}
+        {{ author }}{% unless forloop.last %}, {% endunless %}
+      {% endfor %}
+    </p>
+    {% endif %}
+
+    <p class="citation-meta">
+      {% if item.publisher %}{{ item.publisher }}{% endif %}
+      {% if item.date %} ({{ item.date | date: "%Y" }}){% endif %}
+    </p>
+
+    {% if item.description %}
+    <p class="citation-description">{{ item.description }}</p>
+    {% endif %}
+
+    {% if item.tags %}
+    <div class="citation-tags">
+      {% for tag in item.tags %}
+      <span class="tag">{{ tag }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+
+  {% if item.image %}
+  <div class="citation-image">
+    <img src="{{ item.image | relative_url }}" alt="{{ item.title }}">
+  </div>
+  {% endif %}
+</div>

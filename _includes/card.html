@@ -1,0 +1,36 @@
+{% assign item = include.item %}
+{% assign style = include.style | default: "" %}
+
+<div class="card {{ style }}">
+  {% if item.image %}
+  <div class="card-image">
+    <img src="{{ item.image | relative_url }}" alt="{{ item.title }}">
+  </div>
+  {% endif %}
+
+  <div class="card-content">
+    <h3 class="card-title">
+      {% if item.link %}
+      <a href="{{ item.link | relative_url }}">{{ item.title }}</a>
+      {% else %}
+      {{ item.title }}
+      {% endif %}
+    </h3>
+
+    {% if item.subtitle %}
+    <p class="card-subtitle">{{ item.subtitle }}</p>
+    {% endif %}
+
+    {% if item.description %}
+    <p class="card-description">{{ item.description }}</p>
+    {% endif %}
+
+    {% if item.tags %}
+    <div class="card-tags">
+      {% for tag in item.tags %}
+      <span class="tag">{{ tag }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</div>

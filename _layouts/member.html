@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<div class="member-page">
+  <div class="member-header">
+    {% if page.image %}
+    <img src="{{ page.image | relative_url }}" alt="{{ page.name }}" class="member-photo">
+    {% else %}
+    <img src="{{ '/images/placeholder.jpg' | relative_url }}" alt="{{ page.name }}" class="member-photo">
+    {% endif %}
+
+    <div class="member-info">
+      <h1>{{ page.name }}</h1>
+      {% if page.role %}
+      <p class="role">{{ page.role | capitalize }}</p>
+      {% endif %}
+
+      {% if page.links %}
+      <div class="member-links">
+        {% for link in page.links %}
+        {% include link-button.html type=link[0] link=link[1] %}
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="member-content">
+    {{ content }}
+  </div>
+
+  {% if page.links.orcid %}
+  <section>
+    <h2>Publications</h2>
+    {% include list.html data="citations" component="citation" filters="authors: " %}
+  </section>
+  {% endif %}
+</div>

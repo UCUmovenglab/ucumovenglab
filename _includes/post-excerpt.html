@@ -1,0 +1,29 @@
+{% assign item = include.item %}
+{% assign style = include.style | default: "" %}
+
+<article class="post-excerpt {{ style }}">
+  <h3 class="post-title">
+    <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+  </h3>
+
+  <div class="post-meta">
+    <time datetime="{{ item.date | date_to_xmlschema }}">
+      {{ item.date | date: "%B %d, %Y" }}
+    </time>
+    {% if item.author %}
+    <span class="author">by {{ item.author }}</span>
+    {% endif %}
+  </div>
+
+  {% if item.excerpt %}
+  <p class="excerpt">{{ item.excerpt | strip_html | truncatewords: 50 }}</p>
+  {% endif %}
+
+  {% if item.tags %}
+  <div class="post-tags">
+    {% for tag in item.tags %}
+    <span class="tag">{{ tag }}</span>
+    {% endfor %}
+  </div>
+  {% endif %}
+</article>

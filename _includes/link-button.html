@@ -1,0 +1,21 @@
+{% assign type = include.type %}
+{% assign link = include.link %}
+
+{% case type %}
+  {% when 'email' %}
+    <a href="mailto:{{ link }}" class="link-button" title="Email"><i class="fa-solid fa-envelope"></i></a>
+  {% when 'github' %}
+    <a href="https://github.com/{{ link }}" target="_blank" class="link-button" title="GitHub"><i class="fa-brands fa-github"></i></a>
+  {% when 'orcid' %}
+    <a href="https://orcid.org/{{ link }}" target="_blank" class="link-button" title="ORCID"><i class="fa-brands fa-orcid"></i></a>
+  {% when 'google-scholar' %}
+    <a href="https://scholar.google.com/citations?user={{ link }}" target="_blank" class="link-button" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
+  {% when 'twitter' %}
+    <a href="https://twitter.com/{{ link }}" target="_blank" class="link-button" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+  {% when 'researchgate' %}
+    <a href="https://www.researchgate.net/profile/{{ link }}" target="_blank" class="link-button" title="ResearchGate"><i class="fa-brands fa-researchgate"></i></a>
+  {% when 'home-page' %}
+    <a href="{{ link }}" target="_blank" class="link-button" title="Website"><i class="fa-solid fa-globe"></i></a>
+  {% else %}
+    <a href="{{ link }}" target="_blank" class="link-button" title="{{ type | capitalize }}"><i class="fa-solid fa-link"></i></a>
+{% endcase %}

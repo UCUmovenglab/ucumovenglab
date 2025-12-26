@@ -1,0 +1,44 @@
+# Research projects
+# TODO: Add specific projects as they are developed
+
+- title: Movimiento humano y control motor
+  subtitle: Human Movement and Motor Control
+  group: research
+  image: images/projects/motor-control.jpg
+  link: research
+  description: |-
+    Estudio del movimiento humano con foco en locomoción y movimientos deportivos,
+    utilizando EMG, IMUs y sistemas de captura de movimiento.
+  tags:
+    - motor control
+    - biomechanics
+    - EMG
+    - motion capture
+
+- title: Rehabilitación del movimiento
+  subtitle: Movement Rehabilitation
+  group: research
+  image: images/projects/rehabilitation.jpg
+  link: research
+  description: |-
+    Desarrollo de herramientas para la recuperación del movimiento tras lesiones
+    del sistema nervioso central, incluyendo dispositivos ortésicos y sistemas de biofeedback.
+  tags:
+    - rehabilitation
+    - stroke
+    - biofeedback
+    - orthotics
+
+- title: Digitalización del movimiento
+  subtitle: Movement Digitalization
+  group: research
+  image: images/projects/digitalization.jpg
+  link: research
+  description: |-
+    Tecnologías innovadoras para la captura, registro y análisis del movimiento,
+    incluyendo visión por computadora y procesamiento avanzado de señales.
+  tags:
+    - computer vision
+    - signal processing
+    - AI
+    - electronics

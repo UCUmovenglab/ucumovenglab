@@ -1,0 +1,101 @@
+---
+---
+
+// Import theme customizations
+@import "-theme";
+
+// Custom styles for Movement Engineering Lab
+
+// Header styling
+header {
+  background: var(--primary);
+
+  .logo {
+    max-height: 60px;
+  }
+}
+
+// Footer styling
+footer {
+  background: var(--primary);
+  color: white;
+
+  a {
+    color: var(--tertiary);
+
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+// Navigation
+nav {
+  a {
+    color: var(--text);
+
+    &:hover,
+    &.active {
+      color: var(--primary);
+      border-bottom-color: var(--primary);
+    }
+  }
+}
+
+// Buttons
+.button {
+  background: var(--primary);
+  color: white;
+
+  &:hover {
+    background: var(--secondary);
+  }
+}
+
+// Cards
+.card {
+  border: 1px solid var(--border);
+
+  &:hover {
+    border-color: var(--primary);
+  }
+}
+
+// Sections
+section {
+  padding: 2rem 0;
+}
+
+// Tags
+.tag {
+  background: var(--tertiary);
+  color: white;
+}
+
+// Citations/Publications
+.citation {
+  border-left: 3px solid var(--primary);
+  padding-left: 1rem;
+  margin: 1rem 0;
+}
+
+// Team portraits
+.portrait {
+  text-align: center;
+
+  img {
+    border-radius: 50%;
+    border: 3px solid var(--primary);
+  }
+}
+
+// Bilingual content styling
+.bilingual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}

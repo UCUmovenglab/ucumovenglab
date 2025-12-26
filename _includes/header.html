@@ -1,0 +1,25 @@
+<header>
+  <div class="header-content">
+    <a href="{{ '/' | relative_url }}" class="logo-link">
+      <img src="{{ '/images/logo.svg' | relative_url }}" alt="{{ site.title }}" class="logo">
+      <div class="site-title">
+        <span class="title">{{ site.title }}</span>
+        <span class="subtitle">{{ site.subtitle }}</span>
+      </div>
+    </a>
+
+    <nav>
+      <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Home</a>
+      {% assign sorted_pages = site.pages | where_exp: "p", "p.nav.order" | sort: "nav.order" %}
+      {% for p in sorted_pages %}
+      <a href="{{ p.url | relative_url }}" {% if page.url == p.url %}class="active"{% endif %} {% if p.nav.tooltip %}title="{{ p.nav.tooltip }}"{% endif %}>
+        {{ p.title | split: " / " | first }}
+      </a>
+      {% endfor %}
+    </nav>
+
+    <button class="menu-toggle" aria-label="Toggle menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+</header>

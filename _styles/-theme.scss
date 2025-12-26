@@ -1,0 +1,37 @@
+// Custom theme colors for Movement Engineering Lab (UCU)
+
+// Primary colors from UCU brand
+$primary: #2D3C64;      // UCU Blue
+$secondary: #576895;    // Lighter blue
+$tertiary: #798AB5;     // Even lighter blue
+
+// Text colors
+$text: #1a1a2e;
+$text-light: #4a4a6a;
+
+// Background colors
+$background: #ffffff;
+$background-alt: #f5f6fa;
+
+// Accent colors
+$accent: #2D3C64;
+
+// Link colors
+$link: $primary;
+$link-hover: $secondary;
+
+// Border colors
+$border: #e0e0e0;
+
+// Override default theme variables
+:root {
+  --primary: #{$primary};
+  --secondary: #{$secondary};
+  --tertiary: #{$tertiary};
+  --text: #{$text};
+  --text-light: #{$text-light};
+  --background: #{$background};
+  --background-alt: #{$background-alt};
+  --accent: #{$accent};
+  --link: #{$link};
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg height="1024" version="1.1" width="1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .blue { fill: rgb(49, 66, 111); }
+      .stroke-blue { stroke: rgb(49, 66, 111); }
+    </style>
+  </defs>
+  <text class="blue" style="font-family: Arial; font-size: 140px; font-weight: 700; white-space: pre;" x="482" y="433">UCU</text>
+  <text  class="blue" style="font-family: Arial; font-size: 63.5px; font-weight: 700; white-space: pre;" transform="matrix(1, 0, 0, 1, -5.7, -32)"><tspan x="472" y="554">MOVEMENT</tspan><tspan x="472" dy="1em">​</tspan><tspan>ENGINEERING</tspan><tspan x="471.704" dy="1em">​</tspan></text>
+  <text  class="blue" style="font-family: Arial; font-size: 50px; font-weight: 700; white-space: pre;" x="465" y="638">RESEARCH LAB</text>
+  <path class="stroke-blue" style="fill-opacity: 0; stroke-width: 20px; stroke-linecap: round; stroke-linejoin: round;" d="M 390 480 L 341 453 L 306 404 L 287 397 A 30 30 0 0 0 260 402 L 220 450  A 30 30 0 0 0 215 460 L 205 490 A 10 10 0 0 0 234 500 L 243 472 L 270 442 L 264 500 C 261 500 269 518 269 523 L 207 633 A 10 10 0 0 0 235 650 L 291 551 L 314 577 L 343 655 A 10 10 0 0 0 372 640 L 342 555 L 300 515 L 307 465" />
+  <!--HEAD-->
+  <ellipse  class="stroke-blue" style="stroke-width: 18px; fill-opacity: 0; stroke-linecap: round; stroke-linejoin: round;" cx="316" cy="347" rx="30" ry="30"/>
+  <!--Small wifi-->
+  <path class="stroke-blue" style="stroke-width: 20px; fill-opacity: 0; stroke-linejoin: round; stroke-linecap: round;" d="M 190 550 A 100 100 0 0 1 190 420" />
+  <!-- Large wifi-->
+  <path class="stroke-blue" style="stroke-width: 20px; fill-opacity: 0; stroke-linejoin: round; stroke-linecap: round;" d="M 160 575 A 150 150 0 0 1 160 400" />
+</svg>

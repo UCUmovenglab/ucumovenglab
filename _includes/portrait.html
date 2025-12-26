@@ -1,0 +1,46 @@
+{% assign item = include.item %}
+{% assign style = include.style | default: "" %}
+
+<div class="portrait {{ style }}">
+  <a href="{{ item.url | relative_url }}">
+    {% if item.image %}
+    <img src="{{ item.image | relative_url }}" alt="{{ item.name }}" class="portrait-image">
+    {% else %}
+    <img src="{{ '/images/placeholder.jpg' | relative_url }}" alt="{{ item.name }}" class="portrait-image">
+    {% endif %}
+
+    <div class="portrait-info">
+      <h3 class="portrait-name">{{ item.name }}</h3>
+      {% if item.role %}
+      <p class="portrait-role">
+        {% case item.role %}
+          {% when 'pi' %}Principal Investigator
+          {% when 'phd' %}PhD Student
+          {% when 'masters' %}Master's Student
+          {% when 'undergrad' %}Undergraduate
+          {% when 'postdoc' %}Postdoc
+          {% when 'staff' %}Staff
+          {% else %}{{ item.role | capitalize }}
+        {% endcase %}
+      </p>
+      {% endif %}
+    </div>
+  </a>
+
+  {% if item.links %}
+  <div class="portrait-links">
+    {% if item.links.email %}
+    <a href="mailto:{{ item.links.email }}" title="Email"><i class="fa-solid fa-envelope"></i></a>
+    {% endif %}
+    {% if item.links.github %}
+    <a href="https://github.com/{{ item.links.github }}" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+    {% endif %}
+    {% if item.links.orcid %}
+    <a href="https://orcid.org/{{ item.links.orcid }}" target="_blank" title="ORCID"><i class="fa-brands fa-orcid"></i></a>
+    {% endif %}
+    {% if item.links.google-scholar %}
+    <a href="https://scholar.google.com/citations?user={{ item.links.google-scholar }}" target="_blank" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
+    {% endif %}
+  </div>
+  {% endif %}
+</div>
